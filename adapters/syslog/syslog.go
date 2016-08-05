@@ -210,7 +210,7 @@ func (m *SyslogMessage) Hostname() string {
 }
 
 func (m *SyslogMessage) Timestamp() string {
-	return m.Message.Time.Format(time.RFC3339)
+	return m.Message.Time.Format(time.RFC3339Nano)
 }
 
 func (m *SyslogMessage) ContainerName() string {
